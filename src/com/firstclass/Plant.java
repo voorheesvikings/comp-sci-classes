@@ -1,8 +1,8 @@
 package com.firstclass;
 
 public class Plant{
-    private String type;
-    private int age;
+    public String type;
+    public int age;
     public int numLeaves;
     public int prevLeaves;
     public boolean grownNewLeaf = false;
@@ -12,21 +12,22 @@ public class Plant{
         this.age = age;
     }
     public String getType() {
-        print("This plant is a " + type);
+        System.out.println("This plant is a " + type);
         return type;
     }
     public int getAge() {
-        print("This plant is " + age + " years old.");
+        System.out.println("This plant is " + age + " years old.");
         return age;
     }
     public void grow() {
         age++;
-        print("The plant has grown! It is now " + age + " years old.");
+        System.out.println("The plant has grown! It is now " + age + " years old.");
     }
     public void newLeaf() {
         prevLeaves = numLeaves;
-        numLeaves++;
-        print("A new leaf has sprouted!");
+        numLeaves = numLeaves + 1;
+        grownNewLeaf = true;
+        System.out.println("A new leaf has sprouted!");
     }
 
 
